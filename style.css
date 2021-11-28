@@ -1,0 +1,112 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+.body-Calc {
+    background-color: rgb(27, 27, 27);
+    width: 300px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px gray;
+}
+#btn-area {
+    display: grid;
+    /* "lg koren n d_Left d_Right"
+    "cos ac left proc dilen"
+    "sin seven eight nine mnoz"
+    "tan four five six minus"
+    "factorial one two three plus"
+    "pi zero zero dot equal"; */
+    grid-template-areas: 
+    "ac left proc dilen"
+    "seven eight nine mnoz"
+    "four five six minus"
+    "one two three plus"
+    "more zero dot equal";
+    grid-gap: 25px 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#btn-area span:hover, .hidd > span {
+    filter: brightness(120%);
+}
+#btn-area span:active, .hidd > span  {
+    filter: brightness(90%);
+}
+#btn-area span, .hidd > span  {
+    line-height: 60px;
+    font-family: arial;
+    font-size: 1.5rem;
+    user-select: none;
+}
+.gray {
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+}
+.black {
+    color: white;
+    border-radius: 50%;
+    background-color: rgb(83, 83, 83);
+    width: 60px;
+    height: 60px;
+}
+.cync {
+    display: none;
+    border-radius: 50%;
+    background-color: rgb(110, 136, 160);
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+.orange {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 159, 103);
+    color: white;
+}
+.zero {
+    background-color: rgb(83, 83, 83);
+    height: 60px;
+    grid-area: zero;
+    width: 100%;
+    color: white;
+    border-radius: 34px;
+}
+.result-content {
+    overflow-x: scroll;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    position: relative;
+    padding: 10px;
+    color: white;
+    font-family: arial;
+    margin-bottom: 10px;
+}
+.result-content::-webkit-scrollbar {
+    content: "";
+}
+.result-content::-webkit-scrollbar-button {
+    background-color: rgb(63, 63, 63);
+    width: 1px;
+}
+.result-content::-webkit-scrollbar-track {
+    background-color: rgb(87, 87, 87);
+}
+.result-content::-webkit-scrollbar-thumb {
+    background-color: rgb(54, 54, 54);
+}
+#res {
+    margin:  0;
+    padding-bottom:25px;
+    font-size: 3rem;
+}
+.more {
+    color: orange;
+}
